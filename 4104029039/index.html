@@ -1,0 +1,117 @@
+﻿<html>
+<head>
+<title>小考</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+</head>
+
+<style type="text/css">
+
+#header{
+  background:#FFFFFF;  
+  border-bottom:2px solid #DDDDDD; 
+  width:100%; 
+}
+
+.change{
+	font-size: 18pt;
+	color: red;
+}
+
+</style>
+
+	<body>
+	
+	<div id="header">
+		<br><h3 id="www">Web Programming</h3>
+	</div>
+        
+		<p id="con">Content</p>
+		
+	<ul>
+		<li id="html">HTML</li>
+		<li id="css">CSS</li>
+		<li id="dom">DOM</li>
+		<li id="js">JavaScript</li>
+		<li id="jsp">JSP</li>
+		<div id=more></div>
+	</ul>
+	<br>
+        <input type="button" value="以JS更改元素內容" onclick="send1()"/>
+		<input type="button" value="以jQuery更改CSS" onclick="send2()"/>
+		<input type="button" value="標題新增學號" onclick="send3()"/>
+	
+    
+ 
+<script type="text/javascript">
+	
+	
+	function send1(){
+		var more = document.getElementById("more");
+            more.innerHTML = "";
+		var add =  document.createElement("add");
+        var h = document.getElementById("html");
+        var c = document.getElementById("css");
+		var m = "MySQL";
+        
+		h.innerHTML = "HTML5";
+		c.innerHTML = "CSS3";
+		a = document.createElement("li");
+		aa = document.createTextNode(m);
+		a.appendChild(aa);
+		add.appendChild(a);
+		more.appendChild(add);
+    }
+	
+	function send3(){
+        var nnn = document.getElementById("www");
+		nnn.innerHTML = "Web Programming______4104029039";
+    }
+	
+	$(document).ready(function() { 
+	$(html).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(css).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(dom).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(js).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(jsp).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(more).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(www).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	$(con).hover(function() {
+      $(this).addClass('change');
+    },function() {
+      $(this).removeClass('change');
+    })
+	
+}); 
+	
+    </script>
+</body>
+</html>
